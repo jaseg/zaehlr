@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Zählr</title>
+		<style type="text/css">
+			body {
+				font-size: 120px;
+			}
+			.counter {
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left" class="counter">
+			<a href="#" onclick="javascript:increase('cnt1')">▲</a>
+			<div id="cnt1">20</div>
+			<a href="#" onclick="javascript:decrease('cnt1')">▼</a>
+		</div>
+		<a id="reset" href="#" onclick="javascript:reset()">✘</a>
+		<div id="right" class="counter">
+			<a href="#" onclick="javascript:increase('cnt2')">▲</a>
+			<div id="cnt2">20</div>
+			<a href="#" onclick="javascript:decrease('cnt2')">▼</a>
+		</div>
+		<script type="text/javascript">
+			function increase(id){
+				var e = document.getElementById(id);
+				e.textContent = parseInt(e.textContent)+1;
+			}
+			function decrease(id){
+				var e = document.getElementById(id);
+				e.textContent = parseInt(e.textContent)-1;
+			}
+			function reset(){
+				document.getElementById("cnt1").textContent = 20;
+				document.getElementById("cnt2").textContent = 20;
+			}
+		</script>
+	</body>
+</html>
